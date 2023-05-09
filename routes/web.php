@@ -27,5 +27,30 @@ Route::get('/', function () {
         "shop"
     ];
 
-    return view('home', compact('links'));
+    $comics = config('comics');
+
+    $shopItems = [
+        [
+           "text" => "digital comics",
+           "img" => "resources/img/buy-comics-digital-comics.png"
+        ],
+        [
+            "text" => "dc merchandise",
+            "img" => "resources/img/buy-comics-merchandise.png"
+        ],
+        [
+            "text" => "digital comics",
+            "img" => "resources/img/buy-comics-subscriptions.png"
+        ],
+        [
+            "text" => "digital comics",
+            "img" => "resources/img/buy-comics-shop-locator.png"
+        ],
+        [
+            "text" => "digital comics",
+            "img" => "resources/img/buy-dc-power-visa.svg"
+        ],
+    ];
+
+    return view('home', compact('links', 'comics', 'shopItems'));
 });
