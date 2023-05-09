@@ -3,21 +3,14 @@
         <div class="container">
             <div class="logo">
                 <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="logo comics dc">
-            </div>   
+            </div>  
             <ul>
-                <li>characters</li>
-                <li>comics</li>
-                <li>movies</li>
-                <li>tv</li>
-                <li>games</li>
-                <li>collectibles</li>
-                <li>videos</li>
-                <li>fans</li>
-                <li>news</li>
-                <li>shop</li>
+                @foreach ($links as $link)
+                    <li>{{$link}}</li>
+                @endforeach
             </ul>
             <div class="search">
-                <div class="text">Search</div>
+                <input type="text" class="search-input" placeholder="Search">
                 <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 // START HEADER STYLE
 header{
     nav {
-        height: 100px;
+        height: 80px;
         background-color: white;
 
         .container {
@@ -35,13 +35,39 @@ header{
             align-items: center;
             cursor: pointer;
             text-transform: uppercase;
+
+            i{
+                padding-left: 8px;
+                color: rgb(2, 119, 248);
+            }
+
+            &:nth-child(2){
+                color: rgb(2, 119, 248);
+                border-top: 3px solid transparent;
+                border-bottom: 3px solid rgb(2, 119, 248);
+            }
+
+            &:nth-child(10)::after{
+                font-family: "Font Awesome 5 Free";
+                content: "\f0d7";
+                margin-left: 8px;
+                color: rgb(2, 119, 248);
+            }
         }
 
         .search{
             display: flex;
             align-items: center;
-            width: 100px;
-            gap: 10px;
+
+            input{
+                border: none;
+                border-bottom: 3px solid rgb(2, 119, 248);
+                width: 100px;
+            }
+        }
+        ::placeholder{
+            text-align: end;
+            padding-right: 6px;
         }
     }
 }
